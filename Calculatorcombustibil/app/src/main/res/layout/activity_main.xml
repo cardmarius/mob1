@@ -7,6 +7,13 @@
     android:background="@drawable/bak4"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/costum_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
     <TextView
         android:id="@+id/rezultat_calcul"
         android:layout_width="300dp"
@@ -14,7 +21,7 @@
         android:fontFamily="sans-serif"
         android:text="Rezultat"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

@@ -1,8 +1,12 @@
 package com.example.calculatorcombustibil;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -17,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText num1;
     private EditText num2;
     private EditText num3;
-    //private EditText num4;
     private Button add;
     private TextView result;
 
@@ -27,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
 
             num1 = (EditText) findViewById(R.id.pret_combustibil);
@@ -44,19 +45,19 @@ public class MainActivity extends AppCompatActivity {
 
                     if(num1.length() == 0) {
                         Toast.makeText(getApplicationContext(),"Nu a fost introdus pretul carborantului",Toast.LENGTH_LONG).show();
-                        num1.setError("Introduce pretul carborantului");
+                        num1.setError("Introdu pretul carborantului");
                         return;
                     }
                     if(num2.length() == 0) {
                         Toast.makeText(getApplicationContext(),"Nu a fost introdus consumul",Toast.LENGTH_LONG).show();
-                        num2.setError("Introduce consumul");
+                        num2.setError("Introdu consumul");
                         return;
                     }
                     if(num3.length() == 0) {
                         //String tmp2 = "0";
                        // num3.setText(tmp2);
                         Toast.makeText(getApplicationContext(),"Nu a fost introdua distanta parcursa",Toast.LENGTH_LONG).show();
-                        num3.setError("Introduce distanta parcursa");
+                        num3.setError("Introdu distanta parcursa");
                         return;
                     }
                     double numar1 = Double.parseDouble(num1.getText().toString());
